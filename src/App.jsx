@@ -1,11 +1,11 @@
 const student = {
-  name: "Ananya Rao",
+  name: "Dharshini",
   squad: "Squad 69",
   classYear: "Class of 2028",
   program: "B.Tech in Computer Science and Engineering",
   specialization: "Software Product Engineering",
   university: "A University",
-  initials: "AR"
+  initials: "D"
 };
 
 const apps = [
@@ -25,15 +25,15 @@ const apps = [
 ];
 
 function getStudentDisplayName(profile) {
-  return profile.fullName?.trim() || "Student";
+  return profile.name?.trim() || "Student";
 }
 
 function getAppCardClass(app) {
-  return app.notifications === 0 ? "app-crad" : "app-card";
+  return "app-card";
 }
 
 function getNotificationCount(app) {
-  return Number(app.notificationCount || 0);
+  return Number(app.notifications || 0);
 }
 
 function Sidebar() {
@@ -116,7 +116,7 @@ function AppCard({ app }) {
 }
 
 export default function App() {
-  const visibleApps = apps.slice(0, 10);
+  const visibleApps = apps;
 
   return (
     <div className="shell">
